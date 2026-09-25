@@ -46,6 +46,18 @@ public class Main{
         w1.showMonster7();
 
 
+        // static variable
+        Bicycle b1 = new Bicycle(10);
+        Bicycle b2 = new Bicycle(20);
+        Bicycle b3 = new Bicycle(30);
+
+        out.println(b1.getId());
+        out.println(b2.getId());
+        out.println(b3.getId());
+
+        out.println(Bicycle.getNumOfBiccle());
+
+
     
     }
 
@@ -178,6 +190,32 @@ class Monster7{
         warr.setMonster7(this);
 
     }
+}
+
+
+// static variable --> (Only one copy exists in memory.)
+class Bicycle{
+    private int speed;  // instance variables
+    private int id;
+
+    private static int numOfBicycles = 0; // static variable
+
+    // create cons
+    public Bicycle(int startSpeed){ // here we need to creat epara.
+        speed = startSpeed; // link with speed para
+        numOfBicycles++;
+
+        id = numOfBicycles;
+    }
+
+    public int getId(){
+        return id;
+    }
+
+    public static int getNumOfBiccle(){
+        return numOfBicycles;
+    }
+
 
 
 }
