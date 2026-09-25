@@ -9,6 +9,16 @@ public class Main{
         // this with different name
         Monster2 mons2 = new Monster2("Mike");
         mons2.show();
+
+        // this with method
+        Monster3 mons3 = new Monster3();
+        mons3.setName("Tom");
+        mons3.show();
+
+
+
+
+
     }
 
 }
@@ -34,6 +44,7 @@ class Monster{
 }
 
 
+// this with different name
 class Monster2{
     public String name;
 
@@ -44,4 +55,24 @@ class Monster2{
     public void show(){
         out.println("Name: " + name);
     }
+}
+
+
+// this with method
+class Monster3{
+    public String name;
+
+    public void setName(String name){
+        this.name = name;
+    }
+
+    public String getName(){
+        return this.name;
+    }
+
+    public void show(){
+        out.println("Name: " + getName());
+    }
+
+
 }
