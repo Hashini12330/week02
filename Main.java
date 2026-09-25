@@ -57,6 +57,15 @@ public class Main{
 
         out.println(Bicycle.getNumOfBiccle());
 
+        // IIB
+        Monster8 mons8 = new Monster8(30);
+
+        // IIB value inside constructor
+        Monster9 mons9 = new Monster9();
+        
+
+
+
 
     
     }
@@ -215,7 +224,45 @@ class Bicycle{
     public static int getNumOfBiccle(){
         return numOfBicycles;
     }
+}
 
 
+
+
+// IIB
+class Monster8{
+    int age;    // this variable when put { } not it is IIB. it just local block.
+                // It does not automatically run when an object is created.
+    
+
+    public Monster8(int age){
+        System.out.println("IIB runs before constructor:");
+        this.age = age;
+
+        out.println("Para Age: " + this.age);   
+
+    }
+
+    {
+        System.out.println("IIB runs:");
+        age = 10;
+        out.println("IIB age: " + age); // cannot use outside { }
+                                        // age cannot be accessed because its scope has ended.
+    }
 
 }
+
+
+// IIB vlue use inside constructor
+class Monster9{
+    int Age;
+    {
+        Age = 20;
+    }
+
+    public Monster9(){
+        out.println("IIB value iside constructor: " + Age);        
+
+    }
+}
+
