@@ -13,10 +13,14 @@ public class Main{
         // this with method
         Monster3 mons3 = new Monster3();
         mons3.setName("Tom");
+        mons3.setName("Tom1");  // only show current name, not the previous one
         mons3.show();
 
 
-
+        // this with two constructors
+        Monster4 mons4 = new Monster4();
+        mons4.show();
+        
 
 
     }
@@ -72,6 +76,25 @@ class Monster3{
 
     public void show(){
         out.println("Name: " + getName());
+    }
+}
+
+
+
+// 
+class Monster4{
+    private String name;
+
+    public Monster4(String name){
+        this.name = name;
+    }
+
+    public Monster4(){
+        this("Tommy");
+    }
+
+    public void show(){
+        out.println("Name: " + name);
     }
 
 
