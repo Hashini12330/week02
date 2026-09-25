@@ -38,7 +38,14 @@ public class Main{
         System.out.println("Name: " + mons7.name);
         System.out.println("Age: " + mons7.age);
         
-    
+        
+
+        // reference two class/obj
+        Warrior w1 = new Warrior();
+        Monster7 m1 = new Monster7("Jonny", w1);
+        w1.showMonster7();
+
+
     
     }
 
@@ -143,5 +150,34 @@ class Monster6{
     public Monster6 sendInstance(){
         return this;
     }
+
+}
+
+
+// two classes/objects are connected through a reference.
+class Warrior{
+    Monster7 mons8;
+
+    public void setMonster7(Monster7 mons8){
+        this.mons8 = mons8;
+    }
+
+    public void showMonster7(){
+        out.println("Monster7 name: " + mons8.name);
+    }
+
+}
+
+class Monster7{
+    String name;
+
+    public Monster7(String name, Warrior warr){
+        this.name = name;
+
+        // Pass the current Monster object to Warrior
+        warr.setMonster7(this);
+
+    }
+
 
 }
