@@ -63,10 +63,25 @@ public class Main{
         // IIB value inside constructor
         Monster9 mons9 = new Monster9();
         
+        //**************************
+        // SIB
+        Monster10 mons10 = new Monster10();     // SIB runs only one
+        mons10.showCount();
+
+            // second obj
+        Monster10 mons11 = new Monster10();
+
+        // **************************
+
+
+
+        // 
 
 
 
 
+
+        
     
     }
 
@@ -266,3 +281,44 @@ class Monster9{
     }
 }
 
+
+// SIB
+// static initializer block --> A Static Initializer Block initializes static variables.
+
+class Monster10{
+    
+
+    static int monsterCount;
+    int age;
+
+    static {
+        out.println();
+
+        out.println("Static block runs:");
+        monsterCount = 10;
+
+    }
+
+    public void showCount(){
+        out.println("Monster count: " + monsterCount);
+    }
+
+    { 
+        out.println("IIB runs");
+        age = 50;
+        out.println("IIB age: " + age);
+        
+    }
+
+    Monster10(){
+        out.println("Constructor runs");
+    }
+    /*
+    SIB → once when class loads
+
+    IIB → every time an object is created
+
+    Constructor → every time an object is created */
+
+
+}
