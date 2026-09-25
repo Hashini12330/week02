@@ -6,9 +6,13 @@ public class Main{
         Monster mons1 = new Monster("John", 20);
         mons1.show();
 
-
+        // this with different name
+        Monster2 mons2 = new Monster2("Mike");
+        mons2.show();
     }
+
 }
+
 
 
 // this key word
@@ -24,7 +28,20 @@ class Monster{
 
     public void show(){
         out.println("Name: " + name);
-        out.print("Age: " + age);
+        out.println("Age: " + age);
     }
 
+}
+
+
+class Monster2{
+    public String name;
+
+    public Monster2(String Hisname){
+        this.name = Hisname;
+    }
+
+    public void show(){
+        out.println("Name: " + name);
+    }
 }
