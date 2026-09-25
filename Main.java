@@ -22,7 +22,24 @@ public class Main{
         mons4.show();
         
 
+        // this method without get and set
+        Monster5 mons5 = new Monster5();
+        mons5.details("Jerry");
+        mons5.show();
 
+
+        // reference object
+        
+        Monster6 mons6 = new Monster6();
+        mons6.name = "Sam";
+        mons6.age = 30;
+        
+        Monster6 mons7 = mons6.sendInstance();
+        System.out.println("Name: " + mons7.name);
+        System.out.println("Age: " + mons7.age);
+        
+    
+    
     }
 
 }
@@ -81,7 +98,7 @@ class Monster3{
 
 
 
-// 
+// this with two constructors
 class Monster4{
     private String name;
 
@@ -97,5 +114,34 @@ class Monster4{
         out.println("Name: " + name);
     }
 
+
+}
+
+
+
+// this method without get and set
+class Monster5{
+    private String name;
+
+    public void details(String name){
+        this.name = name;
+    }
+
+    public void show(){
+        out.println("Name: " + name);
+    }
+
+}
+
+// reference object
+// then m1 and m2 refer to the same object, so both can access the same details.(use only same class and different object)
+class Monster6{
+
+    String name;
+    int age;
+
+    public Monster6 sendInstance(){
+        return this;
+    }
 
 }
