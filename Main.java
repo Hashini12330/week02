@@ -79,6 +79,8 @@ public class Main{
         Monster11.setstatic();
 
 
+        // static varable with static method
+        Monster12.showCount();
 
 
 
@@ -332,4 +334,18 @@ class Monster11{
         out.println();
         out.println("Set static method");
     }
+}
+
+
+
+// static variable with static method
+class Monster12{
+    static int count = 10;
+
+    static void showCount(){
+        out.println(count);
+    }
+
+
+
 }
