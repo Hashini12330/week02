@@ -75,13 +75,14 @@ public class Main{
 
 
 
-        // 
+        // static method
+        Monster11.setstatic();
 
 
 
 
 
-        
+
     
     }
 
@@ -321,4 +322,14 @@ class Monster10{
     Constructor → every time an object is created */
 
 
+}
+
+// static method
+
+class Monster11{
+
+    static void setstatic(){
+        out.println();
+        out.println("Set static method");
+    }
 }
