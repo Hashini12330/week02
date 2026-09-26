@@ -83,7 +83,10 @@ public class Main{
         Monster12.showCount();
 
 
-
+        // static variable with normal func
+        Monster13.name = "static with normal func";
+        Monster13 mons13 = new Monster13();
+        mons13.showName();
 
     
     }
@@ -345,7 +348,16 @@ class Monster12{
     static void showCount(){
         out.println(count);
     }
+}
 
 
+// static variable with normal func
+class Monster13{
+    static String name;
+
+    public void showName(){
+        out.println();
+        out.println(name);
+    }
 
 }
